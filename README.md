@@ -1,51 +1,126 @@
-# React + TypeScript + Vite
+# HVAC Proposal Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, Apple-inspired React application for creating and managing professional HVAC proposals. This tool helps HVAC companies present their proposals in a sleek, interactive format that enhances client engagement and streamlines the proposal process.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 Modern, Apple-inspired UI/UX design
+- 📱 Fully responsive layout for all devices
+- 💼 Professional proposal management
+- 📊 Interactive cost and savings calculator
+- 🔄 Real-time proposal preview
+- 📤 Easy sharing and client access
+- 💰 Incentives and rebates tracking
+- 📝 Digital signature support
+- 🔒 Secure proposal storage
+- 📈 ROI visualization
+- 🌡️ Equipment specifications
+- 🏗️ Installation timeline tracking
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React 18 with TypeScript
+- Vite for fast development and building
+- Redux Toolkit for state management
+- Mantine UI v7 for components and theming
+- Framer Motion for animations
+- React Router for navigation
+- Vitest for testing
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Prerequisites
+
+- Node.js 18+ and npm
+- Git for version control
+- A modern web browser
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:sustinbebustin-v2/hvac-prop-tool.git
+   cd hvac-prop-tool
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+### Running Tests
+
+```bash
+# Run tests in watch mode
+npm run test
+
+# Run tests with UI
+npm run test:ui
+
+# Run tests with coverage
+npm run test:coverage
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Project Structure
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
-# hvac-prop-tool
+src/
+├── components/        # Reusable UI components
+│   ├── common/       # Shared components like ErrorBoundary
+│   └── layout/       # Layout components like Navigation
+├── features/         # Feature-specific components and logic
+│   ├── dashboard/    # Dashboard views and components
+│   ├── proposals/    # Proposal management
+│   └── settings/     # Application settings
+├── store/           # Redux store configuration
+│   └── features/    # Redux slices and reducers
+├── styles/          # Global styles and theme
+├── test/            # Test utilities and setup
+├── types/           # TypeScript type definitions
+└── utils/           # Helper functions and utilities
+```
+
+## Key Features in Detail
+
+### Proposal Management
+- Create and edit professional HVAC proposals
+- Real-time preview with Apple-inspired design
+- Automatic calculations for ROI and savings
+- Digital signature integration
+- PDF export capability
+
+### Client Portal
+- Secure sharing links for proposals
+- Interactive cost calculator
+- Easy acceptance and digital signing
+- Mobile-responsive design
+
+### Installation Tracking
+- Step-by-step installation progress
+- Timeline visualization
+- Status updates and notifications
+- Photo documentation support
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m '[Cursor] Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## Development Guidelines
+
+- Follow the established code style and conventions
+- Write tests for new features
+- Update documentation as needed
+- Use meaningful commit messages with the [Cursor] prefix
+- Keep the UI consistent with Apple's design principles
+
